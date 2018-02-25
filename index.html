@@ -2,29 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
+
     <title>CARD VALIDATOR</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <form>
-      <div class="form-group">
-        <label for="cn">Número de tarjeta</label>
-        <input id="cn" name="cn" />
-      </div>
-      <div class="form-group">
-        <label for="exp">Fecha de vencimiento</label>
-        <input id="exp" name="exp" />
-      </div>
-      <div class="form-group">
-        <label for="cvv">CVV</label>
-        <input id="cvv" name="cvv" />
-      </div>
-      <div class="form-group">
-        <label for="name">Nombre completo</label>
-        <input id="name" name="name" />
-      </div>
-      <input type="submit" value="Pagar" />
-    </form>
+    <div class="row">
+      <form name=f1 class="col s12 m6">
+        <div class="row">
+          <div name=div class="form-group">
+            <input type="number" id="cn" name="cn" placeholder="Dígitos de tu tarjeta" required />
+            <label for="cn">Número de tarjeta</label>
+            <!-- IDEA: required, se usa en todos los input para no mandar campos vacíos del form.-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col s4">
+            <input id="exp" name="exp" type = "date" min="2018-02-25" required />
+            <label for="exp">Fecha de vencimiento</label>
+            <!-- IDEA: type="date", hace que se obtenga en el input un calentario y con min="aaaa-mm-dd" (fecha actual) se establece que no se acepten fechas pasadas al día actual.-->
+          </div>
 
+          <div class="form-group col s2">
+            <input type="number" id="cvv" name="cvv" min="100" max="999" placeholder="CVV" required />
+            <label for="cvv">CVV</label>
+            <!-- IDEA: min="100" y max="999", es para que se acepten sólo tres dígitos (combinación de centenas). -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <input type="text" id="name" name="name" pattern="[A-Za-z\sáéíóú]+" required placeholder="¡Tu nombre aquí!" />
+            <label for="name">Nombre completo</label>
+            <!-- IDEA: pattern, establece que sólo sean aceptadas letras, con acentos y espacios. -->
+          </div>
+        </div>
+        <div class="row">
+          <input id="submit" type="submit" value="Pagar" />
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+      <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 

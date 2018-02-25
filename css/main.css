@@ -1,0 +1,18 @@
+input[type=text]:valid, input[type=number]:valid, input[type=date]:valid {
+  border-bottom: 1px solid #0de535;
+}
+
+input[type=text]:invalid,input[type=number]:invalid, input[type=date]:invalid {
+  border: 2px solid #e5640d;
+}
+
+/*.error {
+  border: 1px solid red;
+}
+*/
+
+/* valid color */
+input[type=text]:not(.browser-default),input[type=number]:not(.browser-default), input[type=date]:not(.browser-default) {
+  border-bottom: 1px solid #0de535;
+  //2bbbad
+}

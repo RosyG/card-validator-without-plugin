@@ -36,9 +36,9 @@
           </div>
           <div class="row">
             <div class="form-group">
-              <input type="text" id="name" name="name" pattern="[A-Za-z\sáéíóú]+" required placeholder="¡Tu nombre aquí!" />
+              <input type="text" id="name" name="name" pattern="[A-Za-z\sáéíóú]+" maxlength="30" required placeholder="¡Tu nombre aquí!" />
               <label for="name">Nombre completo</label>
-              <!-- IDEA: pattern, establece que sólo sean aceptadas letras, con acentos y espacios. -->
+              <!-- IDEA: pattern, establece que sólo sean aceptadas letras, con acentos y espacios. Con maxlength="30", se limita la cantidad de carácteres tipo texto a 30. -->
             </div>
           </div>
           <div class="row center">

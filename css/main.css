@@ -16,3 +16,9 @@ input[type=text]:not(.browser-default),input[type=number]:not(.browser-default),
   border-bottom: 1px solid #0de535;
   //2bbbad
 }
+.container > .row {
+  padding-top: 2em;
+  border: 2px solid #004B50;
+  margin: 0 auto;
+  padding-left: 1em;
+}

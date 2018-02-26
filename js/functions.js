@@ -1,6 +1,7 @@
 //Función que devuelve un booleano al validar algoritmo Luhn.
 let validateLuhn = numberCard => {
   //numberCardValid: 49927398716
+  console.log(numberCard);
   let arrayCard = Array.from(numberCard);
   let stringToNumber = arrayCard.reverse().map( item =>  parseInt(item))
   //En el arreglo stringToNumber, se tienen los números invertidos.
